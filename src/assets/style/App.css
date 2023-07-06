@@ -4,11 +4,39 @@ ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
+.btn {
+  transition: all 0.2s;
+}
+.btn:hover {
+  opacity: 0.8;
 }
 
 .main {
   font-family: "Inter", sans-serif;
   font-weight: 400;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 0;
+  transition: all 0.2s;
+}
+.logo:hover {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.7;
+}
+
+.link {
+  color: #000;
+  transition: all 0.2s;
+}
+.link:hover {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.7;
 }

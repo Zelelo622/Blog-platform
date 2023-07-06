@@ -43,7 +43,7 @@ const Login = observer(() => {
           />
         </div>
         <div className="auth__btn-wrapper">
-          <button onClick={click} type="submit" className="login-button">
+          <button onClick={click} type="submit" className="login-button btn">
             Войти
           </button>
         </div>

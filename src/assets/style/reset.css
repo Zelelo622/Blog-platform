@@ -168,3 +168,7 @@ input,
 select {
   vertical-align: middle;
 }
+
+a {
+  text-decoration: none;
+}
