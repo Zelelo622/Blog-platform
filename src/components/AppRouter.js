@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import { authRoutes, publicRoutes } from "../routes";
 import { observer } from "mobx-react";
 import { Context } from "..";
+import { LOGIN_ROUTE } from "../utils/consts";
 
 const AppRouter = observer(() => {
   const { user } = useContext(Context);
@@ -13,8 +14,19 @@ const AppRouter = observer(() => {
         <Route key={path} path={path} element={<Component />} exact />
       ))}
 
-      {user.isAuth && authRoutes.map(({ path, Component }) => (
-        <Route key={path} path={path} element={<Component />} exact />
+      {authRoutes.map(({ path, Component }) => (
+        <Route
+          key={path}
+          path={path}
+          element={
+            user.isAuth ? (
+              <Component />
+            ) : (
+              <Navigate to="/login" replace={true} />
+            )
+          }
+          exact
+        />
       ))}
     </Routes>
   );
