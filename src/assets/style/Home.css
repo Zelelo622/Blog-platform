@@ -29,3 +29,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.is-invalid {
+  border: 1px solid rgba(255, 78, 78, 0.418);
+}
