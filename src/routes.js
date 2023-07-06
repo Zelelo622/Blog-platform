@@ -16,7 +16,7 @@ export const authRoutes = [
     Component: HomePage,
   },
   {
-    path: ARTICLE_ROUTE,
+    path: ARTICLE_ROUTE + "/:id",
     Component: ArticlePage,
   },
 ];
