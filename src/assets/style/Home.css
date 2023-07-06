@@ -1,0 +1,31 @@
+.home {
+}
+
+.home__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.home__link {
+}
+
+.home__wrapper {
+  max-width: 300px;
+  padding: 14px;
+  border: 1px solid #000;
+}
+
+.home__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.home__text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

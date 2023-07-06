@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import { Container } from "react-bootstrap";
+import ArticleList from "../components/ArticleList";
+import "../assets/style/Home.css";
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
-  )
-}
+    <>
+      <div className="home">
+        <Container>
+          <ArticleList />
+        </Container>
+      </div>
+    </>
+  );
+};
 
-export default HomePage
+export default HomePage;
