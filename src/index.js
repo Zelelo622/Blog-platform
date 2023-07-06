@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import UserStore from "./store/UserStore";
+import "./assets/style/reset.css";
 
 export const Context = createContext(null);
 

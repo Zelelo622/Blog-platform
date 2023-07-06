@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { authRoutes, publicRoutes } from "../routes";
 import { observer } from "mobx-react";
 import { Context } from "..";
@@ -22,7 +22,7 @@ const AppRouter = observer(() => {
             user.isAuth ? (
               <Component />
             ) : (
-              <Navigate to="/login" replace={true} />
+              <Navigate to={LOGIN_ROUTE} replace={true} />
             )
           }
           exact
