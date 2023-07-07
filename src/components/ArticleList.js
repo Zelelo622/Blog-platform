@@ -1,15 +1,19 @@
-import React from 'react'
-import { articles } from '../utils/articleObj'
-import ArticleCard from './ArticleCard'
+import React, { useContext, useEffect } from "react";
+import { articles } from "../utils/articleObj";
+import ArticleCard from "./ArticleCard";
+import { observer } from "mobx-react";
+import { Context } from "..";
 
-const ArticleList = () => {
+const ArticleList = observer(() => {
+  const { article } = useContext(Context);
+
   return (
-    <div className='home__list'>
-        {articles.map((article) => (
-            <ArticleCard key={article.id} article={article} />
-        ))}
+    <div className="home__list">
+      {article.articles.map((article) => (
+        <ArticleCard key={article.id} article={article} />
+      ))}
     </div>
-  )
-}
+  );
+});
 
-export default ArticleList
+export default ArticleList;

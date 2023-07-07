@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ARTICLE_ROUTE } from "../utils/consts";
+import { observer } from "mobx-react";
 
-const ArticleCard = ({ article }) => {
+const ArticleCard = observer(({ article }) => {
   return (
     <Link to={ARTICLE_ROUTE + `/${article.id}`} className="home__link link">
       <div className="home__wrapper">
@@ -11,6 +12,6 @@ const ArticleCard = ({ article }) => {
       </div>
     </Link>
   );
-};
+});
 
 export default ArticleCard;

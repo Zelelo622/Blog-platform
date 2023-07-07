@@ -1,7 +1,13 @@
-import { HOME_ROUTE, LOGIN_ROUTE, ARTICLE_ROUTE } from "./utils/consts";
+import {
+  HOME_ROUTE,
+  LOGIN_ROUTE,
+  ARTICLE_ROUTE,
+  ARTICLE_ADD_ROUTE,
+} from "./utils/consts";
 import AuthPage from "./pages/AuthPage";
 import ArticlePage from "./pages/ArticlePage";
 import HomePage from "./pages/HomePage";
+import AddArticlePage from "./pages/AddArticlePage";
 
 export const publicRoutes = [
   {
@@ -18,5 +24,9 @@ export const authRoutes = [
   {
     path: ARTICLE_ROUTE + "/:id",
     Component: ArticlePage,
+  },
+  {
+    path: ARTICLE_ADD_ROUTE,
+    Component: AddArticlePage,
   },
 ];
