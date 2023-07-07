@@ -40,3 +40,7 @@ ul {
   color: #000;
   opacity: 0.7;
 }
+
+.is-invalid {
+  border: 1px solid rgba(255, 78, 78, 0.418) !important; 
+}

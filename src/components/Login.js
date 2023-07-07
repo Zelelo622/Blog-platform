@@ -1,7 +1,7 @@
 import { observer } from "mobx-react";
 import React, { useContext, useState } from "react";
 import { Context } from "..";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { HOME_ROUTE } from "../utils/consts";
 
 const Login = observer(() => {
@@ -21,7 +21,7 @@ const Login = observer(() => {
     if (password === "") {
       setPasswordValid(false);
     }
-    if (email !== "" && password !== "") {
+    if (email.trim() !== "" && password !== "") {
       user.setIsAuth(true);
       navigate(HOME_ROUTE);
     }

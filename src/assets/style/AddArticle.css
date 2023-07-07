@@ -1,0 +1,34 @@
+.addArticle {
+}
+
+.addArticle__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.addArticle__input {
+  margin-bottom: 18px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 5px 16px 5px 10px;
+}
+
+.addArticle__textarea {
+  margin-bottom: 22px;
+  width: 680px;
+  height: 650px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.addArticle__btn {
+  padding: 7px 34px;
+  color: #fff;
+  background-color: #4acd29;
+  border-radius: 10px;
+}
+.addArticle__btn:hover {
+  color: #fff;
+}

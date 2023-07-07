@@ -46,6 +46,7 @@
   color: #fff;
 }
 
-.is-invalid {
-  border: 1px solid rgba(255, 78, 78, 0.418);
+.home__title-empty {
+  font-size: 48px;
+  font-weight: 700;
 }
