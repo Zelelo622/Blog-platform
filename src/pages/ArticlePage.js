@@ -1,6 +1,7 @@
-import React from 'react'
-import ArticleContent from '../components/ArticleContent'
-import { Container } from 'react-bootstrap'
+import React from "react";
+import ArticleContent from "../components/ArticleContent";
+import { Container } from "react-bootstrap";
+import "../assets/style/Article.css";
 
 const ArticlePage = () => {
   return (
@@ -11,7 +12,7 @@ const ArticlePage = () => {
         </Container>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ArticlePage
+export default ArticlePage;

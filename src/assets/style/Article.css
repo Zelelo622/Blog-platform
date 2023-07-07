@@ -1,0 +1,18 @@
+.article {
+}
+
+.article__content {
+  max-width: 680px;
+}
+
+.article__title {
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #868686;
+  margin-bottom: 16px;
+}
+
+.article__text {
+  font-size: 18px;
+}
