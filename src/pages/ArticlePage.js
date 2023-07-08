@@ -31,7 +31,7 @@ const ArticlePage = () => {
               </button>
             )}
           </div>
-          <ArticleContent editMode={editMode} setEdtiMode={setEditMode} />
+          <ArticleContent editMode={editMode} setEditMode={setEditMode} />
         </Container>
       </div>
     </>

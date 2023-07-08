@@ -16,6 +16,32 @@
 
 .article__text {
   font-size: 18px;
+  margin-bottom: 32px;
+}
+
+.article__like-btn {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.article__like-btn > span {
+  font-size: 18px;
+  margin-left: 6px;
+}
+
+.article__img {
+  width: 24px;
+  height: 24px;
+}
+
+.article__hashtags {
+  font-size: 16px;
+}
+
+.article__hashtags > span {
+  color: #0084ff;
 }
 
 .article__btns {

@@ -2,13 +2,21 @@ import { observer } from "mobx-react";
 import React, { useContext, useState } from "react";
 import { Context } from "..";
 import { useNavigate } from "react-router-dom";
-import { ARTICLE_ROUTE, HOME_ROUTE } from "../utils/consts";
+import { HOME_ROUTE } from "../utils/consts";
 
 const ArticleFormManager = observer(
-  ({ titleEdit, contentEdit, editMode, setEdtiMode, selectedArticle }) => {
+  ({
+    titleEdit,
+    contentEdit,
+    hashtagsEdit,
+    editMode,
+    setEditMode,
+    selectedArticle,
+  }) => {
     const { article } = useContext(Context);
     const [title, setTitle] = useState(editMode ? titleEdit : "");
     const [content, setContent] = useState(editMode ? contentEdit : "");
+    const [hashtags, setHashtags] = useState(editMode ? hashtagsEdit : "");
     const [titleValid, setTitleValid] = useState(true);
     const [contentValid, setContentValid] = useState(true);
     const navigate = useNavigate();
@@ -43,11 +51,13 @@ const ArticleFormManager = observer(
           id: lastId + 1,
           title: title,
           content: content,
+          hashtag: hashtags,
         };
 
         article.addArticle(newArticle);
         setTitle("");
         setContent("");
+        setHashtags("");
         navigate(HOME_ROUTE);
       }
     };
@@ -58,10 +68,11 @@ const ArticleFormManager = observer(
           ...selectedArticle,
           title: title,
           content: content,
+          hashtag: hashtags,
         };
 
         article.updateArticle(updatedArticle);
-        setEdtiMode(false);
+        setEditMode(false);
       }
     };
 
@@ -86,6 +97,15 @@ const ArticleFormManager = observer(
           placeholder="Содержание"
           className={`${!contentValid && "is-invalid"} addArticle__textarea`}
         ></textarea>
+        <input
+          type="text"
+          value={hashtags}
+          onChange={(e) => {
+            setHashtags(e.target.value);
+          }}
+          placeholder="Хэштеги"
+          className={`${!titleValid && "is-invalid"} addArticle__input`}
+        />
         {!editMode ? (
           <button className="addArticle__btn btn" onClick={handleAddArticle}>
             Добавить
