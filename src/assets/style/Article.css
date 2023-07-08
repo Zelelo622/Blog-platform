@@ -17,6 +17,7 @@
 .article__text {
   font-size: 18px;
   margin-bottom: 32px;
+  white-space: pre-line;
 }
 
 .article__like-btn {
