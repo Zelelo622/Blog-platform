@@ -22,6 +22,9 @@
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 6px;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .home__text {
