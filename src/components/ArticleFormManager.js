@@ -104,7 +104,7 @@ const ArticleFormManager = observer(
             setHashtags(e.target.value);
           }}
           placeholder="Хэштеги"
-          className={`${!titleValid && "is-invalid"} addArticle__input`}
+          className={`addArticle__input`}
         />
         {!editMode ? (
           <button className="addArticle__btn btn" onClick={handleAddArticle}>
