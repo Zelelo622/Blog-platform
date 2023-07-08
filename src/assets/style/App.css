@@ -45,5 +45,5 @@ ul {
 }
 
 .is-invalid {
-  border: 1px solid rgba(255, 78, 78, 0.418) !important; 
+  border: 2px solid rgba(255, 78, 78, 0.418) !important; 
 }
