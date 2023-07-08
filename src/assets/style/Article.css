@@ -60,3 +60,9 @@
   color: #fff;
   outline: none;
 }
+
+@media screen and (max-width: 420px) {
+  .article {
+    margin-bottom: 30px;
+  }
+}
