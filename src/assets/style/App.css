@@ -10,6 +10,9 @@ ul {
 .btn:hover {
   opacity: 0.8;
 }
+.btn:focus {
+  box-shadow: none;
+}
 
 .main {
   font-family: "Inter", sans-serif;

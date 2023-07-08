@@ -15,6 +15,15 @@ export default class ArticleStore {
     this._articles.push(article);
   }
 
+  updateArticle(updatedArticle) {
+    const index = this._articles.findIndex(
+      (article) => article.id === updatedArticle.id
+    );
+    if (index !== -1) {
+      this._articles[index] = updatedArticle;
+    }
+  }
+
   get articles() {
     return this._articles;
   }

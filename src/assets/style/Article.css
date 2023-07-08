@@ -1,4 +1,5 @@
 .article {
+  margin-bottom: 80px;
 }
 
 .article__content {
@@ -15,4 +16,21 @@
 
 .article__text {
   font-size: 18px;
+}
+
+.article__btns {
+  margin-bottom: 24px;
+  text-align: right;
+}
+
+.article__btn-edit {
+  padding: 7px 34px;
+  color: #fff;
+  background-color: #29cdc5;
+  border-radius: 10px;
+  outline: none;
+}
+.article__btn-edit:hover {
+  color: #fff;
+  outline: none;
 }
