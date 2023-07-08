@@ -11,7 +11,7 @@ const ArticleContent = observer(({ editMode, setEditMode }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [likes, setLikes] = useState(0);
-  const [hashtags, setHashtags] = useState([]);
+  const [hashtags, setHashtags] = useState("");
 
   const selectedArticle = article.articles.find(
     (item) => item.id === parseInt(id)
@@ -29,9 +29,9 @@ const ArticleContent = observer(({ editMode, setEditMode }) => {
       }
 
       if (selectedArticle.hashtag) {
-        setHashtags(selectedArticle.hashtag.split(","));
+        setHashtags(selectedArticle.hashtag);
       } else {
-        setHashtags([]);
+        setHashtags("");
       }
     }
   }, [selectedArticle]);
@@ -65,7 +65,7 @@ const ArticleContent = observer(({ editMode, setEditMode }) => {
               <span>{likes}</span>
             </button>
             <div className="article__hashtags">
-              Hashtags: <span>{hashtags.join(", ")}</span>
+              Hashtags: <span>{hashtags.split(",").join(", ")}</span>
             </div>
           </>
         )}
